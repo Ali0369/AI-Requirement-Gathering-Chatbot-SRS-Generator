@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Requirement Gathering System</title>
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+
+
+
+    <!-- ======= Splash Overlay ======= -->
+    <div class="splash-overlay" id="splashOverlay">
+        <div class="splash-box">
+            <div class="splash-logo">
+                <img src="images/logo1.png" alt="Logo">
+                <span>nova.AI</span>
+            </div>
+            <h1 class="splash-welcome">Welcome to AiNova</h1>
+            <p class="splash-disclaimer">
+                This AI is a tool to assist stakeholders in collecting clear, conflict-free requirements.
+            </p>
+            <button class="splash-btn" onclick="closeSplash()">Enter</button>
+            <div class="splash-timer">
+                <div class="splash-progress" id="splashProgress"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- ======= NAVBAR ======= -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="images/logo1.png" alt="Logo">
+                <span>nova.AI</span>
+        </div>
+                
+            </div>
+        <ul class="nav-links">
+            <li><a href="project.html" class="nav-item">Home</a></li>
+            <li><a href="about.html" class="nav-item">About</a></li>
+            <li><a href="features.html" class="nav-item">Features</a></li>
+            <li><a href="contact.html" class="nav-item">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Background layers -->
+    <canvas id="bgCanvas"></canvas>
+    <div class="bg-blur-circle circle1"></div>
+    <div class="bg-blur-circle circle2"></div>
+    <div class="main-content">
+        <div class="hero-section">
+            <h1>AI Requirement Gathering System</h1>
+            <p>Collect and structure clear, conflict-free software requirements in real-time using AiNova's intelligent
+                assistant.</p>
+        </div>
+
+        <div class="app-container">
+            <header class="header">
+                <h2>AI Requirement Gathering Chatbot</h2>
+                <p>Collect clear, conflict-free requirements with an intelligent assistant</p>
+            </header>
+
+            <div class="chat-container" id="chatbox">
+                <!-- Chat messages will appear here -->
+            </div>
+
+            <div class="input-wrapper">
+                <input type="text" id="userInput" placeholder="Type your response..." />
+                <button class="send-btn">➤</button>
+            </div>
+
+            <button class="srs-btn">Generate SRS Document</button>
+        </div>
+    </div>
+
+
+
+    <br><br><br><br><br>
+
+    <!-- ======= Footer ======= -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- About / Logo -->
+            <div class="footer-col">
+                <div class="footer-logo">
+                    <img src="images/logo1.png" alt="Logo">
+                <span>nova.AI</span>
+                </div>
+                <p class="footer-desc">
+                    AiNova - Your intelligent assistant for collecting clear, conflict-free software requirements.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-col">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="project.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-col">
+                <h3 class="footer-title">Contact</h3>
+                <p>Email: info@ainova.com</p>
+                <br>
+                <p>Phone: +92 322 534612</p>
+                <br>
+                <p>Address: BAHRIA UNIVERSITY, KARACHI CAMPUS</p>
+            </div>
+
+            <!-- Social Media -->
+            <div class="footer-col">
+                <h3 class="footer-title">Follow Us</h3>
+                <div class="footer-socials">
+                    <a href="#"><img src="icons/facebook.svg" alt="Facebook"></a>
+                    <a href="#"><img src="icons/twitter.svg" alt="Twitter"></a>
+                    <a href="#"><img src="icons/linkedin.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="icons/instagram.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2025 nova.AI . All rights reserved.
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+ <script src="
+https://cdn.jsdelivr.net/npm/docx@9.5.1/dist/index.iife.min.js
+"></script>
+    <script src="app.js"></script>
+
+</body>
+<!-- Load docx library first -->
+
+
+<script src="js/nav.js"></script>
+
+</html>

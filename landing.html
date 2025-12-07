@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AiNova - Smart Requirement Assistant</title>
+    <link rel="stylesheet" href="landing.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar">
+        <div class="container nav-inner">
+
+            <div class="nav-logo">
+            <img src="images/logo1.png" alt="Logo">
+                <span>nova.AI</span>
+        </div>
+
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#">Docs</a></li>
+                <li><a href="#">Pricing</a></li>
+            </ul>
+
+            <div class="nav-auth">
+                <a href="login.html" class="btn-outline">Sign In</a>
+                <a href="#registerForm" class="btn-gradient">Register</a>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Background Circles -->
+<div class="bg-circle bg1"></div>
+<div class="bg-circle bg2"></div>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+
+        <div class="container hero-grid">
+
+            <!-- HERO TEXT -->
+            <div class="hero-left">
+                <h1 class="hero-title">
+                    Smart Project<br>
+                    Requirement Assistant
+                </h1>
+
+                <p class="hero-sub">
+                    AiNova turns messy conversations into clean, structured,
+                    conflict-free software requirements using advanced AI.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="project.html" class="btn-gradient">Start Free</a>
+                    <a href="#features" class="btn-outline">Learn More</a>
+                </div>
+            </div>
+
+            <!-- HERO REGISTER FORM -->
+            <div class="hero-right">
+                 <form id="registerForm" class="register-card">
+            <h1>Register</h1>
+            <div class="inputbox">
+                <input type="email" id="registerEmail" required>
+                <label for="">Email</label>
+            </div>
+            <div class="inputbox">
+                <input type="password" id="registerPassword" required>
+                <label for="">Password</label>
+            </div>
+            <div class="inputbox">
+                <input type="password" id="confirmPassword" required>
+                <label for="">Confirm Password</label>
+            </div>
+            <div class="inputbox">
+                <input type="text" id="securityAnswer" required>
+                <label for="">What is your pet's name?</label>
+            </div>
+            <button type="submit">Register</button>
+            <div id="registerMessage"></div>
+            <div class="register">
+                <p>Already have an account? <a href="login.html">Login</a></p>
+            </div>
+        </form>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ================= FEATURES ================= -->
+    <section id="features" class="features">
+        <div class="container">
+
+            <h2 class="section-title">Powerful Features</h2>
+
+            <div class="features-grid">
+
+                <div class="feature-card">
+                    <h3>AI Requirement Extraction</h3>
+                    <p>Extract functional & non-functional requirements instantly.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Conflict Detection</h3>
+                    <p>Spot ambiguous or contradictory requirements automatically.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Use Case Builder</h3>
+                    <p>Generate complete use cases with actors & flows.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>SRS Document Export</h3>
+                    <p>Export full software requirement specifications in one click.</p>
+                </div>
+
+            </div>
+
+            <div class="center-btn">
+                <a href="project.html" class="btn-gradient">Start Free Trial</a>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+    <!-- ================= YOUR ORIGINAL FOOTER (UNCHANGED) ================= -->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-col">
+                 <div class="footer-logo">
+                    <img src="images/logo1.png" alt="Logo">
+                <span>nova.AI</span>
+                </div>
+                <p class="footer-desc">
+                    nova.AI - Your intelligent assistant for collecting clear, conflict-free software requirements.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="project.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-title">Contact</h3>
+                <p>Email: info@ainova.com</p><br>
+                <p>Phone: +92 322 534612</p><br>
+                <p>Address: BAHRIA UNIVERSITY, KARACHI CAMPUS</p>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-title">Follow Us</h3>
+
+                <div class="footer-socials">
+                    <a href="#"><img src="icons/facebook.svg"></a>
+                    <a href="#"><img src="icons/twitter.svg"></a>
+                    <a href="#"><img src="icons/linkedin.png"></a>
+                    <a href="#"><img src="icons/instagram.png"></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2025 nova.AI . All rights reserved.
+        </div>
+    </footer>
+ <script src="register.js"></script>
+</body>
+</html>

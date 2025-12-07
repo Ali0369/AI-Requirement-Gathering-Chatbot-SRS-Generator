@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+    <section>
+        <div class="bg-circle bg1"></div>
+<div class="bg-circle bg2"></div>
+        <form id="registerForm">
+            <h1>Register</h1>
+            <div class="inputbox">
+                <input type="email" id="registerEmail" required>
+                <label for="">Email</label>
+            </div>
+            <div class="inputbox">
+                <input type="password" id="registerPassword" required>
+                <label for="">Password</label>
+            </div>
+            <div class="inputbox">
+                <input type="password" id="confirmPassword" required>
+                <label for="">Confirm Password</label>
+            </div>
+            <!-- <div class="inputbox">
+                <input type="text" id="securityQuestion" required>
+                <label for=""> What is your pet's name?</label>
+            </div> -->
+            <div class="inputbox">
+                <input type="text" id="securityAnswer" required>
+                <label for="">What is your pet's name?</label>
+            </div>
+            <button type="submit">Register</button>
+            <div id="registerMessage"></div>
+            <div class="register">
+                <p>Already have an account? <a href="login.html">Login</a></p>
+            </div>
+        </form>
+    </section>
+    <script src="register.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="forgot-password.css">
+    <title>Forgot Password</title>
+</head>
+
+<body>
+    <section>
+        <form id="forgotPasswordForm">
+            <h1>Forgot Password</h1>
+            <div class="inputbox">
+                <input type="email" id="forgotEmail" required>
+                <label for="">Email</label>
+            </div>
+            <!-- <div class="inputbox">
+                <input type="text"  required>
+                <label id="securityQuestionDisplay"for="question"> Enter Security Question</label>
+               
+    
+            </div> -->
+            <div class="inputbox">
+                <input type="text" id="securityAnswerInput" required>
+                <label for="">What is your pet's name?</label>
+            </div>
+            <div class="inputbox">
+                <input type="password" id="newPassword" required>
+                <label for="">New Password</label>
+            </div>
+            <button type="submit">Reset Password</button>
+            <div id="resetMessage"></div>
+        </form>
+    </section>
+    <script src="forgot.js"></script>
+</body>
+
+</html>

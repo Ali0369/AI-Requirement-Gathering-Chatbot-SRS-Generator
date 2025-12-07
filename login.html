@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Oxaam</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <div class="logo">
+                <img src="images/logo1.png" alt="Logo">
+                <span>nova.ai</span>
+            </div>
+
+            <h1>Welcome back <span class="wave">👋</span></h1>
+            <p>Sign in to manage your free tools, premium plans, and instant account upgrades — all from a single
+                dashboard.</p>
+
+            <div class="features">
+                <div class="feature">
+                    <ion-icon name="flash-outline"></ion-icon>
+                    <span>1-click access to 100+ services</span>
+                </div>
+                <div class="feature">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <span>Secure login</span>
+                </div>
+                <div class="feature">
+                    <ion-icon name="logo-telegram"></ion-icon>
+                    <span>24×7 support on Telegram</span>
+                </div>
+            </div>
+
+            <p class="new-user">New here? <a href="landing.html">Register your account</a> then come back and sign in.
+            </p>
+        </div>
+
+        <div class="right-panel">
+            <form id="loginForm">
+                <h2>Sign in to Oxaam</h2>
+                <p class="subtitle">Enter your email and password to access your dashboard.</p>
+
+                <div class="inputbox">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <input type="email" id="email" required>
+                    <label>Email</label>
+                </div>
+
+                <div class="inputbox">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <input type="password" id="password" required>
+                    <label>Password</label>
+                </div>
+
+                <div class="options">
+                    <label><input type="checkbox"> Remember Me</label>
+                    <a href="forgot.html">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="btn-signin">Sign in</button>
+                <div id="message"></div>
+                <button type="button" class="btn-forgot">Forgot password</button>
+
+                <p class="register-link">Don't have an account? <a href="landing.html">Register</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+
+</html>

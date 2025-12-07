@@ -4,7 +4,7 @@
 ![Banner](https://img.shields.io/badge/AI%20Chatbot-Requirements%20Engineering-blueviolet?style=for-the-badge)
 ![Node](https://img.shields.io/badge/Backend-Node.js-green?style=for-the-badge)
 ![Frontend](https://img.shields.io/badge/Frontend-HTML%2FCSS%2FJS-orange?style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-brightgreen?style=for-the-badge)
+
 
 ---
 
@@ -93,6 +93,6 @@ Option B: If served by Express →
 ```sh
 http://localhost:3000
 ```
-🌟 Feedback
+## 🌟 Feedback
 
 If you want improvements or features, feel free to open an Issue.

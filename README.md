@@ -32,7 +32,7 @@ The chatbot:
 ### **SRS Generator**
 - Creates a complete IEEE SRS  
 - Sections included: FRs, NFRs, Constraints, Glossary, RTM  
-- Downloads as a `.txt` file  
+- Downloads as a `.docx` file  
 
 ### **Modern Chat UI**
 - Clean dark theme  

@@ -18,6 +18,5 @@ button:hover{transform:translateY(-2px);box-shadow:0 0 18px rgba(0,229,255,0.7)}
 .register{ text-align:center;color:#fff;margin-top:18px}
 .register a{color:#00e5ff;font-weight:600;text-decoration:none}
 .register a:hover{text-decoration:underline}
-
-/* compact variant for overlay */
 .register-card { width:360px; padding:22px; }
+

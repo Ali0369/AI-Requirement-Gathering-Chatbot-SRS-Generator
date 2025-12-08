@@ -1,23 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-/* ======================= General Reset ======================= */
+
 * {margin:0; padding:0; box-sizing:border-box; font-family: 'Poppins', sans-serif;}
 body {min-height:100vh; display:flex; flex-direction:column; background:#000; color:#fff; overflow-x:hidden;}
 
-/* ======================= Background Glowing Circles ======================= */
+
 .bg-circle {position:absolute; border-radius:50%; filter:blur(100px); z-index:0;}
 .bg1 {width:500px; height:500px; background:radial-gradient(circle,#7b2ff7cc 0%,transparent 70%); top:70px; left:-250px;}
 .bg2 {width:400px; height:400px; background:radial-gradient(circle,#00e5ffcc 0%,transparent 70%); bottom:-150px; right:-150px;}
 
-/* ======================= Navbar ======================= */
 .navbar {position:fixed; top:0; left:0; width:100%; height:70px; padding:0 40px; display:flex; justify-content:space-between; align-items:center; backdrop-filter:blur(20px) saturate(180%); background:rgba(20,20,20,0.45); border-bottom:1px solid rgba(255,255,255,0.07); z-index:999;}
 .nav-logo {
     display: flex;
     align-items: center;
-    gap: 10px; /* spacing between image and text */
+    gap: 10px; 
     font-size: 28px;
     font-weight: 800;
 
-    /* gradient text */
+
     background: linear-gradient(90deg, #00e5ff, #7b2ff7);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -26,7 +25,7 @@ body {min-height:100vh; display:flex; flex-direction:column; background:#000; co
 }
 
 .nav-logo img {
-    width: 50px;       /* clean size */
+    width: 50px;     
     height: auto;
     object-fit: contain;
 
@@ -38,12 +37,11 @@ body {min-height:100vh; display:flex; flex-direction:column; background:#000; co
 .nav-item::after, .nav-item.active::after {content:""; position:absolute; bottom:-6px; left:0; width:0%; height:3px; border-radius:10px; background:linear-gradient(90deg,#00e5ff,#7b2ff7); transition:0.3s;}
 .nav-item:hover::after, .nav-item.active::after {width:100%;}
 
-/* ======================= Hero Section ======================= */
+
 .features-hero {padding:140px 20px 60px; text-align:center; z-index:1; position:relative;}
 .features-hero h1 {font-size:42px; font-weight:800; margin-bottom:16px; background:linear-gradient(90deg,#00e5ff,#7b2ff7); -webkit-background-clip:text; -webkit-text-fill-color:transparent;}
 .features-hero p {font-size:18px; color:rgba(255,255,255,0.85); margin-bottom:24px;}
 
-/* ======================= Features Grid ======================= */
 .features-grid {padding:60px 20px; max-width:1200px; margin:0 auto; text-align:center; z-index:1; position:relative;}
 .grid-3 {
     display: grid;
@@ -53,7 +51,7 @@ body {min-height:100vh; display:flex; flex-direction:column; background:#000; co
 }
 
 .grid-3 .card:last-child {
-    /* Only center if row is incomplete */
+
     justify-self: center;
 }
 
@@ -63,15 +61,15 @@ body {min-height:100vh; display:flex; flex-direction:column; background:#000; co
 .card .icon {font-size:28px; margin-bottom:12px; color:#00e5ff;}
 .card h3 {font-size:18px; margin-bottom:10px;}
 .card p {color:rgba(255,255,255,0.85); line-height:1.5; font-size:15px;}
-/* ======================= CTA Section ======================= */
+
 .features-cta {padding:60px 20px; text-align:center; z-index:1; position:relative;}
 .features-cta h2 {font-size:30px; margin-bottom:20px; font-weight:700; background:linear-gradient(90deg,#00e5ff,#7b2ff7); -webkit-background-clip:text; -webkit-text-fill-color:transparent;}
 .btn.primary {display:inline-block; padding:12px 28px; border-radius:14px; background:linear-gradient(135deg,#00d5ff,#7b2ff7); color:#fff; font-weight:600; text-decoration:none; box-shadow:0 0 20px rgba(0,255,255,0.3); transition:0.3s;}
 .btn.primary:hover {transform:translateY(-3px); box-shadow:0 10px 25px rgba(0,255,255,0.4);}
 
-/* ======================= FOOTER ======================= */
+
 .footer {
-    background: rgba(10, 10, 18, 0.9); /* darker + semi-transparent */
+    background: rgba(10, 10, 18, 0.9); 
     border-top: 1px solid rgba(255,255,255,0.15);
     backdrop-filter: blur(25px);
     box-shadow: 0 0 35px rgba(0, 0, 0, 0.4), 0 0 25px rgba(0,229,255,0.08);
@@ -94,11 +92,11 @@ body {min-height:100vh; display:flex; flex-direction:column; background:#000; co
 .footer-logo {
     display: flex;
     align-items: center;
-    gap: 10px; /* spacing between image and text */
+    gap: 10px; 
     font-size: 28px;
     font-weight: 800;
 
-    /* gradient text */
+
     background: linear-gradient(180deg, #00e5ff, #7b2ff7);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -107,7 +105,7 @@ body {min-height:100vh; display:flex; flex-direction:column; background:#000; co
 }
 
 .footer-logo img {
-    width: 45px;       /* clean size */
+    width: 45px;    
     height: auto;
     object-fit: contain;
 
@@ -154,12 +152,11 @@ body {min-height:100vh; display:flex; flex-direction:column; background:#000; co
 }
 
 
-/* ======================= Socials Column ======================= */
 .footer-socials-container {
     display: flex;
-    flex-direction: column; /* stack vertically */
-    align-items: flex-start; /* align to start of column */
-    gap: 12px; /* space between heading and icons */
+    flex-direction: column;
+    align-items: flex-start; 
+    gap: 12px; 
     margin-top: 20px;
 }
 
@@ -174,33 +171,33 @@ body {min-height:100vh; display:flex; flex-direction:column; background:#000; co
 
 .footer-socials {
     display: flex;
-    flex-direction: row; /* stack icons vertically */
-    align-items: flex-start; /* left-align icons with heading */
-    gap: 16px; /* space between icons */
+    flex-direction: row; 
+    align-items: flex-start; 
+    gap: 16px; 
 }
 
 .footer-socials a {
     display: flex;
-    align-items: center;     /* vertically center content */
-    justify-content: center; /* horizontally center content */
+    align-items: center;   
+    justify-content: center; 
     width: 50px;
     height: 50px;
     border-radius: 50%;
     margin-right: 16px;
-    /* background: linear-gradient(135deg, #00d5ff, #7b2ff7); */
+
     box-shadow: 0 0 15px rgba(255,255,255,0.2);
     overflow: hidden;
-    position: relative;      /* ensure child absolute works */
+    position: relative;   
 }
 
 .footer-socials a img {
-    position: absolute;      /* position absolutely inside circle */
+    position: absolute; 
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* center perfectly */
-    width: 90%;              /* slightly smaller than circle to avoid overflow */
+    transform: translate(-50%, -50%); 
+    width: 90%;             
     height: 90%;
-    object-fit: contain;     /* maintain aspect ratio */
+    object-fit: contain;   
 }
 
 .footer-socials a:hover {
@@ -215,9 +212,9 @@ body {min-height:100vh; display:flex; flex-direction:column; background:#000; co
     color: rgba(255,255,255,0.5);
 }
 
-/* RESPONSIVE ADJUSTMENTS FOR FOOTER */
 @media (max-width: 768px) {
     .footer-container { flex-direction: column; align-items: center; text-align: center; }
     .footer-col { margin-bottom: 25px; text-align: center; }
     .footer-socials { justify-content: center; }
 }
+

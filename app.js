@@ -31,7 +31,7 @@ function appendMessage(sender, text) {
     divWrapper.style.alignItems = "flex-start";
     divWrapper.style.gap = "8px";
 
-    // Avatar + Name container
+
     const avatarContainer = document.createElement("div");
     avatarContainer.className = "avatar-container";
 
@@ -48,19 +48,19 @@ function appendMessage(sender, text) {
     avatarContainer.appendChild(avatar);
     avatarContainer.appendChild(name);
 
-    // Chat message
+
     const messageDiv = document.createElement("div");
     messageDiv.className = sender === "bot" ? "bot-message" : "user-message";
     messageDiv.textContent = text;
 
-    // Timestamp
+
     const time = document.createElement("div");
     time.className = "timestamp";
     const now = new Date();
     time.textContent = now.getHours().toString().padStart(2, "0") + ":" + now.getMinutes().toString().padStart(2, "0");
     messageDiv.appendChild(time);
 
-    // Append avatar-container + message
+
     if (sender === "bot") {
         divWrapper.appendChild(avatarContainer);
         divWrapper.appendChild(messageDiv);
@@ -113,60 +113,11 @@ function showTyping(isTyping) {
   chatbox.scrollTop = chatbox.scrollHeight;
 }
 
-// // Generate SRS in IEEE format
-// async function generateSRS() {
-//   appendMessage("bot", "Generating SRS document...");
 
-//   // Prepare answers only
-//   const answersText = collectedRequirements.map((req, i) => {
-//     return `Answer ${i + 1}: ${req}`;
-//   }).join("\n");
-
-//   const prompt = `
-// You are a professional requirements analyst. 
-// Based on the following stakeholder answers, generate a **Software Requirements Specification (SRS)** document in **IEEE standard format**. 
-
-// Requirements:
-// - Do NOT include the original questions.
-// - Summarize each answer into concise, professional requirement statements.
-// - Categorize requirements into **Functional**, **Non-Functional**, and **Constraints**.
-// - Highlight any conflicts or ambiguities under a "Conflicts" section.
-// - Include the following IEEE sections with proper headings:
-
-// 1. Introduction
-// 2. Scope
-// 3. Purpose
-// 4. Definitions
-// 5. User Characteristics
-// 6. Functional Requirements
-// 7. Non-Functional Requirements
-// 8. Constraints
-// 9. Conflicts
-// 10. Final Summary
-
-// Stakeholder answers:
-// ${answersText}
-// `;
-
-//   const result = await askAI(prompt);
-//   downloadSRS(result);
-// }
-
-// function downloadSRS(text) {
-//   const blob = new Blob([text], { type: "text/plain" });
-//   const link = document.createElement("a");
-//   link.href = URL.createObjectURL(blob);
-//   link.download = "SRS_Document.txt";
-//   link.click();
-//   appendMessage("bot", "✅ Your SRS document is ready in IEEE format.");
-// }
-
-// ---------------------- Generate SRS for Word ----------------------
-// ---------------------- SRS Generation ----------------------
 let userName = "";
 let projectName = "";
 
-// ---------------------- Ask for user info first ----------------------
+
 async function askUserInfo() {
     userName = prompt("Please enter your name for the SRS document:");
     if (!userName) userName = "Anonymous";
@@ -175,19 +126,19 @@ async function askUserInfo() {
     if (!projectName) projectName = "Untitled Project";
 }
 
-// ---------------------- Generate SRS ----------------------
+
 async function generateSRS() {
-    // Ask user info first
+  
     if (!userName || !projectName) {
         await askUserInfo();
     }
 
     appendMessage("bot", "Generating SRS document...");
 
-    // Combine all user messages into one description
+  
     const userDescription = collectedRequirements.join(". ") || "A software project.";
 
-    // Prompt AI to generate full SRS with automatic content
+  
     const prompt = `
 You are a professional requirements analyst.
 A user wants a software project with the following description:
@@ -211,7 +162,6 @@ Generate a full Software Requirements Specification (SRS) in IEEE standard forma
 - Keep it concise, clear, and suitable for stakeholders and developers.
 `;
 
-    // Ask AI for the SRS content
     let srsText;
     try {
         srsText = await askAI(prompt);
@@ -251,11 +201,11 @@ Summary of the system.
 `;
     }
 
-    // Generate Word document
+ 
     downloadSRSWord(srsText, projectName, userName);
 }
 
-// ---------------------- Word Generation ----------------------
+
 async function downloadSRSWord(srsText, projectName, userName) {
     const { Document, Packer, Paragraph, HeadingLevel, TextRun } = docx;
 
@@ -265,7 +215,7 @@ async function downloadSRSWord(srsText, projectName, userName) {
         sections: [
             {
                 children: [
-                    // Title page
+                  
                     new Paragraph({
                         text: "SOFTWARE REQUIREMENTS SPECIFICATION",
                         heading: HeadingLevel.TITLE,
@@ -284,18 +234,17 @@ async function downloadSRSWord(srsText, projectName, userName) {
                         text: `Date: ${today}`,
                         spacing: { after: 400 }
                     }),
-                    new Paragraph({ text: "", pageBreakBefore: true }), // blank line with page break
-
-                    // Process AI content
+                    new Paragraph({ text: "", pageBreakBefore: true }), 
+                  
                     ...srsText.split("\n").map(line => {
                         line = line.trim();
                         if (!line) return new Paragraph({ text: "" });
 
-                        // Remove markdown symbols
-                        line = line.replace(/^\s*#+\s*/, ""); // remove # headings
-                        line = line.replace(/\*\*/g, "");     // remove ** bold
+                    
+                        line = line.replace(/^\s*#+\s*/, ""); 
+                        line = line.replace(/\*\*/g, "");    
 
-                        // Detect section headings like "1. Introduction"
+                       
                         const sectionMatch = line.match(/^(\d+)\.\s+(.+)/);
                         if (sectionMatch) {
                             return new Paragraph({
@@ -305,7 +254,7 @@ async function downloadSRSWord(srsText, projectName, userName) {
                             });
                         }
 
-                        // Normal paragraph
+                    
                         return new Paragraph({
                             children: [new TextRun(line)],
                             spacing: { after: 120 }
@@ -333,9 +282,6 @@ async function downloadSRSWord(srsText, projectName, userName) {
 
 
 
-///////////////////////////////////////////////
-
-// Auto-progress timer
 let splashProgress = document.getElementById("splashProgress");
 let splashOverlay = document.getElementById("splashOverlay");
 let width = 0;
@@ -364,3 +310,4 @@ function resizeCanvas() {
 }
 window.addEventListener("resize", resizeCanvas);
 resizeCanvas();
+

@@ -37,15 +37,15 @@ body {
 .left-panel .logo {
     display: flex;
     align-items: center;
-    gap: 12px;          /* spacing between logo image and text */
+    gap: 12px;        
     font-size: 28px;
     font-weight: 600;
     margin-bottom: 25px;
-    color: #fff;        /* ensure logo text is visible */
+    color: #fff;        
 }
 
 .left-panel .logo img {
-    width: 55px;        /* perfect size for side-by-side logos */
+    width: 55px;      
     height: auto;
     object-fit: contain;
     filter: drop-shadow(0 0 6px rgba(255,255,255,0.25));
@@ -224,7 +224,6 @@ button {
     text-decoration: underline;
 }
 
-/* Responsive */
 @media (max-width: 900px) {
     .container {
         flex-direction: column;
@@ -243,3 +242,4 @@ button {
         justify-content: center;
     }
 }
+

@@ -13,7 +13,6 @@ body {
     overflow-x: hidden;
 }
 
-/* ==================== GLOBAL LAYOUT ==================== */
 
 .container {
     width: 88%;
@@ -26,7 +25,6 @@ a {
 }
 
 
-/* ==================== NAVBAR ==================== */
 
 .navbar {
     width: 100%;
@@ -49,11 +47,10 @@ a {
 .nav-logo {
     display: flex;
     align-items: center;
-    gap: 10px; /* spacing between image and text */
+    gap: 10px; 
     font-size: 28px;
     font-weight: 800;
 
-    /* gradient text */
     background: linear-gradient(90deg, #00e5ff, #7b2ff7);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -62,7 +59,7 @@ a {
 }
 
 .nav-logo img {
-    width: 50px;       /* clean size */
+    width: 50px;      
     height: auto;
     object-fit: contain;
 
@@ -93,7 +90,7 @@ a {
     align-items: center;
 }
 
-/* Buttons */
+
 .btn-gradient {
     padding: 10px 20px;
     background: linear-gradient(90deg,#00e5ff,#7b2ff7);
@@ -123,7 +120,6 @@ a {
 }
 
 
-/* ==================== HERO ==================== */
 .hero {
     padding-top: 140px;
     padding-bottom: 120px;
@@ -136,7 +132,6 @@ a {
     justify-content: space-between;
 }
 
-/* LEFT TEXT */
 .hero-left {
     width: 50%;
 }
@@ -162,7 +157,7 @@ a {
     margin-top: 25px;
 }
 
-/* RIGHT — REGISTER FORM */
+
 .hero-right {
     width: 45%;
     display: flex;
@@ -189,7 +184,6 @@ a {
     -webkit-text-fill-color: transparent;
 }
 
-/* INPUT FIELDS */
 .inputbox {
     position: relative;
     margin: 22px 0;
@@ -228,7 +222,7 @@ a {
     font-size: 12px;
 }
 
-/* REGISTER BUTTON */
+
 .register-card button {
     width: 100%;
     padding: 12px;
@@ -257,8 +251,6 @@ a {
 }
 
 
-
-/* ==================== FEATURES ==================== */
 .features {
     padding: 90px 0;
     text-align: center;
@@ -298,14 +290,12 @@ a {
     margin-bottom: 10px;
 }
 
-/* SECTION CTA */
+
 .center-btn {
     text-align: center;
     margin-top: 50px;
 }
 
-
-/* ==================== RESPONSIVE ==================== */
 
 @media (max-width: 1024px) {
     .hero-grid {
@@ -327,7 +317,6 @@ a {
     }
 }
 
-/* ======================= Footer ======================= */
 .footer {
     background: linear-gradient(135deg, #0d0c1d, #111122, #17172b);
     backdrop-filter: blur(15px);
@@ -340,7 +329,7 @@ a {
     flex-shrink: 0;
 }
 
-/* Make footer stick at bottom if content is short */
+
 body {
     display: flex;
     flex-direction: column;
@@ -366,11 +355,11 @@ body {
 .footer-logo {
     display: flex;
     align-items: center;
-    gap: 10px; /* spacing between image and text */
+    gap: 10px; 
     font-size: 28px;
     font-weight: 800;
 
-    /* gradient text */
+
     background: linear-gradient(180deg, #00e5ff, #7b2ff7);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -379,7 +368,7 @@ body {
 }
 
 .footer-logo img {
-    width: 45px;       /* clean size */
+    width: 45px;      
     height: auto;
     object-fit: contain;
 
@@ -423,13 +412,12 @@ body {
     text-shadow: 0 0 8px rgba(255,255,255,0.5);
 }
 
-/* ======================= Socials ======================= */
-/* ======================= Socials Column ======================= */
+
 .footer-socials-container {
     display: flex;
-    flex-direction: column; /* stack vertically */
-    align-items: flex-start; /* align to start of column */
-    gap: 12px; /* space between heading and icons */
+    flex-direction: column; 
+    align-items: flex-start; 
+    gap: 12px; 
     margin-top: 20px;
 }
 
@@ -444,33 +432,33 @@ body {
 
 .footer-socials {
     display: flex;
-    flex-direction: row; /* stack icons vertically */
-    align-items: flex-start; /* left-align icons with heading */
-    gap: 16px; /* space between icons */
+    flex-direction: row; 
+    align-items: flex-start; 
+    gap: 16px; 
 }
 
 .footer-socials a {
     display: flex;
-    align-items: center;     /* vertically center content */
-    justify-content: center; /* horizontally center content */
+    align-items: center;    
+    justify-content: center; 
     width: 50px;
     height: 50px;
     border-radius: 50%;
     margin-right: 16px;
-    /* background: linear-gradient(135deg, #00d5ff, #7b2ff7); */
+  
     box-shadow: 0 0 15px rgba(255,255,255,0.2);
     overflow: hidden;
-    position: relative;      /* ensure child absolute works */
+    position: relative;   
 }
 
 .footer-socials a img {
-    position: absolute;      /* position absolutely inside circle */
+    position: absolute;   
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* center perfectly */
-    width: 90%;              /* slightly smaller than circle to avoid overflow */
+    transform: translate(-50%, -50%); 
+    width: 90%;          
     height: 90%;
-    object-fit: contain;     /* maintain aspect ratio */
+    object-fit: contain;     
 }
 
 .footer-socials a:hover {
@@ -478,7 +466,6 @@ body {
     box-shadow: 0 0 25px rgba(255,255,255,0.4);
 }
 
-/* ======================= Footer Bottom ======================= */
 .footer-bottom {
     text-align: center;
     margin-top: 40px;
@@ -486,7 +473,7 @@ body {
     color: rgba(255,255,255,0.5);
 }
 
-/* ======================= Responsive ======================= */
+
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
@@ -517,4 +504,5 @@ body {
     background: radial-gradient(circle, #00e5ffcc 0%, transparent 70%);
     bottom:-550px; right:-200px;
     z-index: -999;
+
 }

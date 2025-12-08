@@ -1,81 +1,3 @@
-// import express from "express";
-// import cors from "cors";
-// import dotenv from "dotenv";
-// import path from "path";
-// import { fileURLToPath } from "url";
-// import fetch from "node-fetch";
-
-// dotenv.config();
-
-// const __filename = fileURLToPath(import.meta.url);
-// const __dirname = path.dirname(__filename);
-
-// const app = express();
-// app.use(cors());
-// app.use(express.json());
-
-// // Serve frontend
-// app.use(express.static(__dirname));
-// app.get("/", (req, res) => res.sendFile(path.join(__dirname, "landing.html")));
-
-// // Hugging Face Deepseek API
-// const HF_TOKEN = process.env.HF_TOKEN;
-// const MODEL = "deepseek-ai/DeepSeek-V3-0324"; // Free chat model
-
-// // Ask AI function
-// async function askAI(message) {
-//   try {
-//     const response = await fetch(`https://router.huggingface.co/v1/chat/completions`, {
-//       method: "POST",
-//       headers: {
-//         "Authorization": `Bearer ${HF_TOKEN}`,
-//         "Content-Type": "application/json",
-//       },
-//       body: JSON.stringify({
-//         model: MODEL,
-//         messages: [
-//           {
-//             role: "user",
-//             content: `
-// You are a professional requirement-gathering chatbot.
-// Instructions:
-// - Ask only **one short question at a time**.
-// - Wait for the stakeholder's answer before asking the next question.
-// - Clarify conflicts immediately if answers are ambiguous or conflicting.
-// - Categorize each response automatically as Functional, Non-Functional, or Constraint.
-// - Respond in plain text only, no Markdown or special symbols.
-// - Keep your tone professional and concise.
-
-// Stakeholder input: "${message}"`
-//           }
-//         ],
-//       }),
-//     });
-
-//     const data = await response.json();
-
-//     if (data.error) return "⚠️ AI Error: " + data.error;
-//     return data.choices?.[0]?.message?.content || "⚠️ No response from AI";
-
-//   } catch (err) {
-//     console.error(err);
-//     return "⚠️ Error connecting to AI.";
-//   }
-// }
-
-// // API endpoint
-// app.post("/ask", async (req, res) => {
-//   const { message } = req.body;
-//   const reply = await askAI(message);
-//   res.json({ reply });
-// });
-
-// const PORT = 3000;
-// app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
-
-
-
-
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
@@ -98,11 +20,10 @@ app.use(express.json());
 app.use(express.static(__dirname));
 app.get("/", (req, res) => res.sendFile(path.join(__dirname, "landing.html")));
 
-// Hugging Face Deepseek API
-const HF_TOKEN = process.env.HF_TOKEN;
-const MODEL = "deepseek-ai/DeepSeek-V3-0324"; // Free chat model
 
-// Ask AI function
+const HF_TOKEN = process.env.HF_TOKEN;
+const MODEL = "deepseek-ai/DeepSeek-V3-0324"; 
+
 async function askAI(message) {
   try {
     const response = await fetch(`https://router.huggingface.co/v1/chat/completions`, {
@@ -143,7 +64,7 @@ Stakeholder input: "${message}"`,
   }
 }
 
-// Initialize SQLite database
+
 async function initDB() {
   const db = await open({
     filename: path.join(__dirname, "database", "users.db"),
@@ -163,7 +84,6 @@ async function initDB() {
   return db;
 }
 
-// API endpoints for login/register/forgot
 app.post("/api/register", async (req, res) => {
   const { email, password, securityAnswer } = req.body;
   try {
@@ -216,7 +136,6 @@ app.post("/api/forgot", async (req, res) => {
   }
 });
 
-// Hugging Face AI endpoint
 app.post("/ask", async (req, res) => {
   const { message } = req.body;
   const reply = await askAI(message);
@@ -225,3 +144,4 @@ app.post("/ask", async (req, res) => {
 
 const PORT = 3000;
 app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+
